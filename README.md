@@ -1,6 +1,6 @@
 # 📊 Business Performance Dashboard
 
-**Analyse d'écarts budgétaires · KPIs Supply Chain · Simulation what-if · Commentaire de gestion IA**
+**Analyse d'écarts budgétaires · KPIs Supply Chain · N vs N-1 · Anomalies Z-score · Simulation what-if · Rapport PDF · Commentaire IA**
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://business-performance-dashboard.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square)](https://python.org)
@@ -18,13 +18,19 @@ Un dashboard unifié couvrant deux périmètres métier distincts :
 - Heatmap département × catégorie
 - **Simulation what-if** : impact d'une hausse de 8% des coûts logistiques ? → recalcul instantané
 - Alertes automatiques sur seuils configurables
+- **Détection d'anomalies Z-score** : points statistiquement aberrants flaggés automatiquement (>2σ)
+- **Comparaison N vs N-1** : upload deux fichiers, visualisation des deltas sur tous les KPIs
+- **Export PDF** : rapport complet (KPIs + alertes + commentaire IA) en un clic
 - **Commentaire de gestion IA** : synthèse niveau comité de direction (Claude API)
 
 ### 🚚 Module Supply Chain KPIs
 - Taux de service, délai moyen, taux de retour, ratio coût/CA par région
 - Analyse bubble : volume × performance
 - Couverture stock par région
+- **Détection d'anomalies Z-score** : régions statistiquement anormales identifiées automatiquement
+- **Comparaison N vs N-1** : delta taux de service, coût logistique par région
 - **Simulation what-if** : impact d'un retard de 2 jours sur toute la chaîne ?
+- **Export PDF** : rapport opérationnel prêt pour comité de pilotage
 - **Commentaire opérationnel IA** : synthèse niveau comité de pilotage
 
 ---
@@ -60,8 +66,10 @@ Le dashboard **détecte automatiquement** le type de fichier uploadé :
 | Visualisations | Plotly (waterfall, heatmap, bubble, line) |
 | Données | Pandas |
 | Commentaire IA | Claude Haiku (Anthropic API) — BYOK |
-| Export | CSV UTF-8 BOM compatible Excel FR |
+| Export PDF | fpdf2 — rapport prêt pour comité |
+| Export CSV | UTF-8 BOM compatible Excel FR |
 | Formats upload | CSV (auto-séparateur) + Excel (.xlsx) |
+| Détection anomalies | Z-score manuel (scipy-free) |
 
 ---
 
