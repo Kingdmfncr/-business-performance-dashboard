@@ -1,0 +1,31 @@
+mois,region,categorie_produit,commandes_total,livraisons_a_temps,taux_service,delai_moyen_jours,retours,cout_logistique,ca_expedie,stock_couverture_jours
+2026-01,Europe Nord,Prêt-à-porter,1250,1162,92.96,3.2,38,185000,2850000,42
+2026-01,Europe Sud,Maroquinerie,890,801,90.00,4.1,27,142000,3120000,38
+2026-01,Asie Pacifique,Prêt-à-porter,2100,1953,93.00,5.8,63,298000,5640000,35
+2026-01,Amériques,Maroquinerie,760,684,90.00,6.2,23,118000,2240000,45
+2026-01,Moyen-Orient,Accessoires,430,405,94.19,3.8,13,68000,1580000,52
+2026-02,Europe Nord,Prêt-à-porter,1180,1110,94.07,3.0,35,175000,2690000,40
+2026-02,Europe Sud,Maroquinerie,920,847,92.07,3.9,28,148000,3250000,36
+2026-02,Asie Pacifique,Prêt-à-porter,2350,2209,94.00,5.5,71,315000,6100000,33
+2026-02,Amériques,Maroquinerie,810,737,91.00,6.0,24,125000,2380000,43
+2026-02,Moyen-Orient,Accessoires,480,454,94.58,3.6,14,74000,1720000,50
+2026-03,Europe Nord,Prêt-à-porter,1320,1255,95.08,2.9,40,192000,3050000,38
+2026-03,Europe Sud,Maroquinerie,1050,966,92.00,4.0,32,162000,3680000,34
+2026-03,Asie Pacifique,Prêt-à-porter,2580,2451,95.00,5.2,77,342000,6820000,31
+2026-03,Amériques,Maroquinerie,880,800,90.91,6.3,26,135000,2590000,41
+2026-03,Moyen-Orient,Accessoires,520,494,95.00,3.5,16,80000,1890000,48
+2026-04,Europe Nord,Prêt-à-porter,1410,1353,95.96,2.8,42,205000,3240000,37
+2026-04,Europe Sud,Maroquinerie,980,902,92.04,4.2,30,155000,3420000,36
+2026-04,Asie Pacifique,Prêt-à-porter,2420,2299,95.00,5.4,73,326000,6380000,32
+2026-04,Amériques,Maroquinerie,830,747,90.00,6.5,25,128000,2440000,42
+2026-04,Moyen-Orient,Accessoires,490,466,95.10,3.7,15,76000,1800000,49
+2026-05,Europe Nord,Prêt-à-porter,1380,1311,95.00,3.1,41,200000,3180000,39
+2026-05,Europe Sud,Maroquinerie,1100,1012,92.00,4.1,33,170000,3850000,33
+2026-05,Asie Pacifique,Prêt-à-porter,2700,2565,95.00,5.1,81,358000,7150000,30
+2026-05,Amériques,Maroquinerie,900,810,90.00,6.4,27,138000,2650000,40
+2026-05,Moyen-Orient,Accessoires,540,513,95.00,3.6,16,83000,1960000,47
+2026-06,Europe Nord,Prêt-à-porter,1450,1392,96.00,2.8,43,210000,3380000,36
+2026-06,Europe Sud,Maroquinerie,1020,949,93.04,3.8,31,160000,3580000,35
+2026-06,Asie Pacifique,Prêt-à-porter,2650,2543,96.00,5.0,80,350000,7020000,31
+2026-06,Amériques,Maroquinerie,860,774,90.00,6.2,26,132000,2530000,41
+2026-06,Moyen-Orient,Accessoires,510,490,96.08,3.5,15,79000,1870000,48
