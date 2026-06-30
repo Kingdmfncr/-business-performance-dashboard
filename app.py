@@ -131,7 +131,9 @@ def health_gauge(score, label):
         },
         number={"font": {"color": color, "size": 36}, "suffix": "/100"},
     ))
-    fig.update_layout(**CHART_DEFAULTS, height=220)
+    # go.Indicator n'a pas d'axes x/y — exclure ces clés pour éviter "undefined" en JS
+    gauge_layout = {k: v for k, v in CHART_DEFAULTS.items() if k not in ("xaxis", "yaxis")}
+    fig.update_layout(**gauge_layout, height=220)
     return fig
 
 # ─── Anomalies Z-score ────────────────────────────────────────────────────────
