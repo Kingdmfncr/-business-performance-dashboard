@@ -16,38 +16,57 @@ st.set_page_config(
 # ─── Design System ────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-  [data-testid="stAppViewContainer"] { background: #0a0a0a; color: #ffffff; }
-  [data-testid="stSidebar"] { background: #16213e; }
-  [data-testid="stSidebar"] * { color: #ffffff !important; }
-  h1 { color: #ffffff; font-size: 2rem; font-weight: bold; }
-  h2 { color: #00ff88; font-size: 1.4rem; }
-  h3 { color: #ffffff; font-size: 1.1rem; }
-  .stTabs [data-baseweb="tab"] { color: #888888; }
-  .stTabs [aria-selected="true"] { color: #00ff88 !important; border-bottom: 2px solid #00ff88; }
+  /* ── Base ── */
+  [data-testid="stAppViewContainer"] { background: #080810; color: #e8e8f0; }
+  [data-testid="stSidebar"] { background: #0f0f1e; border-right: 1px solid #1e1e3a; }
+  [data-testid="stSidebar"] * { color: #c8c8e0 !important; }
+  [data-testid="stSidebar"] .stMarkdown h2 { color: #00e07a !important; font-size: 1rem !important; letter-spacing: .05em; text-transform: uppercase; }
+  /* ── Titres ── */
+  h1 { color: #ffffff; font-size: 1.9rem; font-weight: 700; letter-spacing: -.02em; }
+  h2 { color: #00e07a; font-size: 1.25rem; font-weight: 600; }
+  h3 { color: #c8c8e0; font-size: 1rem; font-weight: 500; }
+  /* ── Tabs ── */
+  .stTabs [data-baseweb="tab-list"] { background: #0f0f1e; border-radius: 8px; padding: 4px; gap: 2px; }
+  .stTabs [data-baseweb="tab"] { color: #666688; border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 500; }
+  .stTabs [aria-selected="true"] { color: #ffffff !important; background: #1a1a3a !important; border-bottom: none !important; }
+  /* ── Métriques ── */
   div[data-testid="metric-container"] {
-    background: #1a1a2e; border-radius: 8px; padding: 16px;
-    border-left: 3px solid #00ff88;
+    background: #12122a; border-radius: 10px; padding: 14px 18px;
+    border: 1px solid #1e1e3a; border-top: 2px solid #00e07a;
   }
-  .alert-ok { background:#003d1a; border-left:4px solid #00ff88; border-radius:4px; padding:10px 16px; margin:6px 0; color:#fff; }
-  .alert-warning { background:#3d2f00; border-left:4px solid #ffd700; border-radius:4px; padding:10px 16px; margin:6px 0; color:#fff; }
-  .alert-danger { background:#3d0000; border-left:4px solid #ff4444; border-radius:4px; padding:10px 16px; margin:6px 0; color:#fff; }
-  .anomaly-tag { display:inline-block; background:#3d0000; color:#ff8888; border:1px solid #ff4444; border-radius:4px; padding:2px 8px; margin:2px; font-size:0.8rem; }
-  .health-box { background:#1a1a2e; border:1px solid rgba(0,255,136,0.3); border-radius:12px; padding:20px; text-align:center; margin:8px 0; }
-  .whatif-box { background:#1a1a2e; border:1px solid rgba(0,255,136,0.3); border-radius:8px; padding:16px; margin:8px 0; }
-  .narrative-box { background:#1a1a2e; border:1px solid #ffd700; border-radius:8px; padding:20px; margin:12px 0; font-size:0.95rem; line-height:1.7; color:#ffffff; }
-  .footer-caption { color:#888888; font-size:0.8rem; text-align:center; margin-top:32px; }
-  .n1-badge { display:inline-block; background:#1a1a2e; border:1px solid #4ecdc4; border-radius:4px; padding:2px 8px; font-size:0.75rem; color:#4ecdc4; margin-left:6px; }
+  div[data-testid="metric-container"] label { color: #8888aa !important; font-size: 0.78rem !important; text-transform: uppercase; letter-spacing: .06em; }
+  div[data-testid="metric-container"] [data-testid="stMetricValue"] { color: #ffffff !important; font-size: 1.5rem !important; font-weight: 700; }
+  /* ── Alertes ── */
+  .alert-ok      { background: rgba(0,224,122,.08); border-left: 3px solid #00e07a; border-radius: 6px; padding: 10px 16px; margin: 5px 0; color: #b0f0d0; font-size: 0.9rem; }
+  .alert-warning { background: rgba(255,200,0,.08);  border-left: 3px solid #ffc800; border-radius: 6px; padding: 10px 16px; margin: 5px 0; color: #ffe080; font-size: 0.9rem; }
+  .alert-danger  { background: rgba(255,60,60,.09);  border-left: 3px solid #ff3c3c; border-radius: 6px; padding: 10px 16px; margin: 5px 0; color: #ffaaaa; font-size: 0.9rem; }
+  /* ── Anomalies ── */
+  .anomaly-tag { display:inline-flex; align-items:center; gap:4px; background:#200010; color:#ff9090; border:1px solid rgba(255,60,60,.4); border-radius:20px; padding:4px 12px; margin:3px; font-size:0.82rem; font-family:monospace; }
+  /* ── Boîtes ── */
+  .whatif-box  { background: #0f0f1e; border: 1px solid #1e1e3a; border-radius: 10px; padding: 18px; margin: 8px 0; }
+  .narrative-box { background: #0f0f1e; border: 1px solid rgba(255,200,0,.25); border-left: 3px solid #ffc800; border-radius: 8px; padding: 20px; margin: 12px 0; font-size: 0.95rem; line-height: 1.8; color: #e0e0f0; }
+  /* ── Divider ── */
+  hr { border-color: #1e1e3a !important; }
+  /* ── Footer ── */
+  .footer-caption { color: #444466; font-size: 0.78rem; text-align: center; margin-top: 40px; }
+  /* ── Buttons ── */
+  .stDownloadButton button, .stButton button {
+    background: #00e07a !important; color: #000 !important; border: none !important;
+    font-weight: 600 !important; border-radius: 8px !important;
+  }
 </style>
 """, unsafe_allow_html=True)
 
 CHART_DEFAULTS = dict(
-    paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#1a1a2e",
-    font_color="#ffffff", font_family="sans-serif",
-    title_font_color="#00ff88", title_font_size=16,
-    legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color="white")),
-    margin=dict(l=20, r=20, t=40, b=20),
+    paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#0f0f1e",
+    font_color="#c8c8e0", font_family="Inter, sans-serif",
+    title_font_color="#00e07a", title_font_size=15,
+    legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color="#c8c8e0"), bordercolor="rgba(0,0,0,0)"),
+    margin=dict(l=16, r=16, t=44, b=16),
+    xaxis=dict(gridcolor="#1a1a2e", linecolor="#1e1e3a", tickcolor="#444466"),
+    yaxis=dict(gridcolor="#1a1a2e", linecolor="#1e1e3a", tickcolor="#444466"),
 )
-PALETTE = ["#00ff88", "#ffd700", "#4ecdc4", "#ff4444", "#a855f7", "#f97316"]
+PALETTE = ["#00e07a", "#ffc800", "#4dd8e0", "#ff3c3c", "#a78bfa", "#fb923c"]
 
 # ─── Chargement données ───────────────────────────────────────────────────────
 @st.cache_data
@@ -123,9 +142,10 @@ def detect_anomalies_ctrl(df):
     if std == 0:
         return []
     agg["zscore"] = (agg["ecart_pct"] - mean) / std
+    agg["mois_str"] = pd.to_datetime(agg["mois"]).dt.strftime("%Y-%m")
     anomalies = agg[agg["zscore"].abs() > 2]
     return [
-        f"{'⬆️' if row['ecart_pct'] > 0 else '⬇️'} {row['departement']} ({row['mois'][:7]}) "
+        f"{'⬆' if row['ecart_pct'] > 0 else '⬇'} {row['departement']} ({row['mois_str']}) "
         f"— écart {row['ecart_pct']:+.1f}% (Z={row['zscore']:.1f}σ)"
         for _, row in anomalies.iterrows()
     ]
@@ -137,9 +157,10 @@ def detect_anomalies_sc(df):
     if std == 0:
         return []
     agg["zscore"] = (agg["taux_service"] - mean) / std
+    agg["mois_str"] = pd.to_datetime(agg["mois"]).dt.strftime("%Y-%m")
     anomalies = agg[agg["zscore"].abs() > 2]
     return [
-        f"{'⬇️' if row['taux_service'] < mean else '⬆️'} {row['region']} ({row['mois'][:7]}) "
+        f"{'⬇' if row['taux_service'] < mean else '⬆'} {row['region']} ({row['mois_str']}) "
         f"— taux service {row['taux_service']:.1f}% (Z={row['zscore']:.1f}σ)"
         for _, row in anomalies.iterrows()
     ]
